@@ -1,0 +1,7 @@
+FROM node:20.11.0
+
+WORKDIR /usr/src/app
+COPY package*.json ./
+
+CMD npm install --prefer-offline=true && \
+    npm run dev
